@@ -14,7 +14,7 @@
       "jsx": true
     }
   },
-  "plugins": ["react-hooks", "import", "jest", "jsx-a11y", "@typescript-eslint", "eslint-plugin-header", "prettier"],
+  "plugins": ["react-hooks", "import", "jest", "jsx-a11y", "@typescript-eslint", "prettier"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",

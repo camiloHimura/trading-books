@@ -1,16 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
-import toogleSlice from './toogle.slice';
-import factsSlice from './facts.slice';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+
+import bookSlice from './book.slice';
 
 const store = configureStore({
-  reducer: {
-    toogle: toogleSlice.reducer,
-    facts: factsSlice.reducer,
-  },
+    reducer: {
+        book: bookSlice.reducer,
+    },
 });
 
 export default store;
 
 export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

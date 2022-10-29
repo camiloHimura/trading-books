@@ -1,14 +1,18 @@
 import './row.scss';
 
-interface RowProps {}
+interface RwoProps {
+    data: [number, number, number];
+}
 
-export const Row = (_props: RowProps) => {
+export const Row = ({ data }: RwoProps) => {
+    const [price, count, amount] = data;
+
     return (
         <div className='booksRow'>
-            <div>row Count</div>
-            <div>row Amount</div>
-            <div>row Total</div>
-            <div>row Price</div>
+            <div>{price}</div>
+            <div>{count}</div>
+            <div>{amount}</div>
+            <div></div>
         </div>
     );
 };
